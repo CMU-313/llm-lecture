@@ -48,8 +48,8 @@ game board and resetting the turn indicator.
 5. **Advanced CPU player:** Enhance the AI-based CPU player to include multiple difficulty levels. Implement algorithms such as Minimax, Alpha-Beta Pruning, or Monte Carlo Tree Search to make the CPU player more challenging to defeat.
 
 # Resources
-React Documentation: https://reactjs.org/docs/getting-started.html
-Jest Documentation: https://jestjs.io/docs/getting-started
-React Testing Library Documentation: https://testing-library.com/docs/react-testing-library/intro
-ChatGPT: https://chatgpt.com/
-GitHub Copilot: https://copilot.github.com/
+- React Documentation: https://reactjs.org/docs/getting-started.html
+- Jest Documentation: https://jestjs.io/docs/getting-started
+- React Testing Library Documentation: https://testing-library.com/docs/react-testing-library/intro
+- ChatGPT: https://chatgpt.com/
+- GitHub Copilot: https://copilot.github.com/
