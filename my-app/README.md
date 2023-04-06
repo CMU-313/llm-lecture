@@ -68,3 +68,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Components
+App
+The main component that renders the Tic Tac Toe game board.
+
+Props:
+
+None
+State:
+
+board: An array of 9 strings representing the current state of the game board. Each string is either 'X', 'O', or null.
+player: A string representing the current player. Either 'X' or 'O'.
+Functions:
+
+handleClick(index: number): A function that is called when a square on the game board is clicked. The index parameter is the index of the clicked square in the board array. This function updates the board array with the current player's symbol and switches the player state to the other player.
+Square
+A functional component that renders a single square on the game board.
+
+Props:
+
+value: A string representing the value of the square. Either 'X', 'O', or null.
+onClick: A function that is called when the square is clicked. This function is passed a single parameter, which is the index of the square in the board array.
+Functions
+checkWinner(board: Array<string>): string | null
+A function that takes an array of 9 strings representing the current state of the game board and checks if there's a winner. If there's a winner, it returns the symbol of the winner ('X' or 'O'). If there's no winner, it returns null.
