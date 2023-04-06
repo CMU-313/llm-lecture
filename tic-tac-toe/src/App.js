@@ -74,45 +74,33 @@ class App extends Component {
   }
 
   render() {
-    // Create an array of JSX elements to represent the game board
-    let board = this.state.board.map((row, rowIndex) => {
-      let cells = row.map((cell, colIndex) => {
-        return (
-          <div key={colIndex} className="cell" onClick={() => this.handleCellClick(rowIndex, colIndex)}>
-            {cell}
-          </div>
-        );
-      });
+    const { board, player, winner } = this.state;
   
-      return (
-        <div key={rowIndex} className="row">
-          {cells}
-        </div>
-      );
-    });
-  
-    // Create a message to display based on the game state
-    let message;
-    if (this.state.winner !== null) {
-      message = `${this.state.winner} wins!`;
-    } else if (this.state.board.every(row => row.every(cell => cell !== ''))) {
-      message = 'Tie game!';
-    } else {
-      message = `It's ${this.state.player}'s turn`;
-    }
-  
-    // Render the game board and UI
     return (
-      <div className="tic-tac-toe">
+      <div className="app">
         <div className="board">
-          {board}
+          {board.map((row, rowIndex) => (
+            <div key={rowIndex} className="row">
+              {row.map((cell, cellIndex) => (
+                <div key={cellIndex} className="cell" onClick={() => this.handleCellClick(rowIndex, cellIndex)}>
+                  {cell === 'X' && <span className="x">X</span>}
+                  {cell === 'O' && <span className="o">O</span>}
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
-        <div className="message">
-          {message}
+        {winner && <div className="message">{`${winner} wins!`}</div>}
+        {!winner && !board.flat().includes(null) && <div className="message">It's a tie!</div>}
+        {!winner && board.flat().includes(null) && <div className="message">{`Player ${player}'s turn`}</div>}
+        <div className="buttons">
+          <button className="reset" onClick={this.handleReset}>Reset</button>
+          {winner || !board.flat().includes(null) ? <button className="play-again" onClick={this.handleReset}>Play Again</button> : null}
         </div>
       </div>
     );
   }
+  
   
 }
 

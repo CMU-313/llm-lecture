@@ -73,3 +73,37 @@
 .o {
   color: #ff5500;
 }
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset {
+  background-color: #cc0000;
+  color: #fff;
+}
+
+.reset:hover {
+  background-color: #ff1a1a;
+}
+
+.play-again {
+  background-color: #0077ff;
+  color: #fff;
+}
+
+.play-again:hover {
+  background-color: #005ae6;
+}
