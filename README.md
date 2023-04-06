@@ -47,6 +47,13 @@ game board and resetting the turn indicator.
 
 5. **Advanced CPU player:** Enhance the AI-based CPU player to include multiple difficulty levels. Implement algorithms such as Minimax, Alpha-Beta Pruning, or Monte Carlo Tree Search to make the CPU player more challenging to defeat.
 
+# Super bonus stretch features
+1. **Write a test** for NodeBB
+
+2. **Explain some code** in NodeBB
+
+3. **Add comments to code** in NodeBB
+
 # Resources
 - React Documentation: https://reactjs.org/docs/getting-started.html
 - Jest Documentation: https://jestjs.io/docs/getting-started
