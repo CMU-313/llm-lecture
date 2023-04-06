@@ -1,62 +1,70 @@
-# Tic Tac Toe React App
+# Getting Started with Create React App
 
-This repository only contains this Readme. Your task is to build a tic tac toe react app using generative AI tools like ChatGPT or GitHub Copilot to assist you in **every** aspect of the process.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Before you begin working on the TO-DO, please take note of the following questions which we will be discussing after the activity:
+## Available Scripts
 
-1. What are the advantages and disadvantages of using generative AI tools like ChatGPT and GitHub Copilot?
-2. What kind of task did you find worked well with ChatGPT and GitHub Copilot? 
-3. What kind of task did you find did not work well with ChatGPT and GitHub Copilot?
-4. What is something you did not expect when using ChatGPT and GitHub Copilot?
+In the project directory, you can run:
 
-# TO-DO
-**Disclaimer** You are should attempt each task, but there is no guarantee that ChatGPT / Copilot can assist you with it.  If you find yourself stuck, you may move on or try a different task.
+### `npm start`
 
-- [ ] Make a fork of this repository, work individually or as pairs
-- [ ] Set up Boilerplate Create React App
-- [ ] Implement the **Core Features**
-- [ ] **Write tests** Write unit tests for your components and functions using a testing library (e.g., Jest, React Testing Library). Ensure that your tests cover edge cases and provide adequate code coverage.
-- [ ] **Write documentation** Document your code, including component descriptions, function explanations, and usage instructions. This will help future developers understand and maintain the codebase.
-- [ ] **Write commit messages** and push commits
-- [ ] **Make a Pull Request** and write pull request descriptions
-- [ ] Implement the **Stretch Features**
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-# Core Features to Implement
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-1. **Display game board:** Create a 3x3 game board using a combination of React components and CSS styling. Each cell of the game board should be clickable.
+### `npm test`
 
-2. **Player turns:** Implement alternating turns for two players, X and O. Show an indicator (e.g., text or visual cue) to inform the current player whose turn it is.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-3. **Handle player moves:** When a player clicks on an empty cell, mark it with their respective symbol (X or O). Prevent a player from overwriting an occupied cell.
+### `npm run build`
 
-4. **Check for win condition:** After each move, check if there's a winning combination (3 in a row, column, or diagonal) on the board. If a player wins, display a congratulatory message and highlight the winning combination.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-5. **Check for draw:** If there are no empty cells remaining and no player has won, declare the game as a draw and display an appropriate message.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-6. **Reset game:** Provide a button to reset the game, clearing the 
-game board and resetting the turn indicator.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-# Stretch Features 
-1. **Player customization:** Allow players to choose their own symbols or colors, making the game more personalized.
+### `npm run eject`
 
-2. **Undo/redo moves:** Allow players to undo or redo their moves, enabling them to correct mistakes or try different strategies.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-3. **Game board size:** Let users choose the size of the game board (e.g., 4x4, 5x5) to increase the complexity of the game.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-4. **CPU player:** Create an AI-based CPU player with a basic level of intelligence for a single-player mode. The CPU player should be able to make valid moves and have some strategy to avoid losing.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-5. **Advanced CPU player:** Enhance the AI-based CPU player to include multiple difficulty levels. Implement algorithms such as Minimax, Alpha-Beta Pruning, or Monte Carlo Tree Search to make the CPU player more challenging to defeat.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-# Super bonus stretch features
-1. **Write a test** for NodeBB
+## Learn More
 
-2. **Explain some code** in NodeBB
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-3. **Add comments to code** in NodeBB
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-# Resources
-- React Documentation: https://reactjs.org/docs/getting-started.html
-- Jest Documentation: https://jestjs.io/docs/getting-started
-- React Testing Library Documentation: https://testing-library.com/docs/react-testing-library/intro
-- ChatGPT: https://chatgpt.com/
-- GitHub Copilot: https://copilot.github.com/
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
