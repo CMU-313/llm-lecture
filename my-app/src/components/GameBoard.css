@@ -1,0 +1,53 @@
+/* Set background color and font */
+body {
+  background-color: #FFE1E6;
+  font-family: Arial, sans-serif;
+}
+
+/* Update square styles */
+.square {
+  background-color: #FFF;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #777;
+  font-size: 4rem;
+  font-weight: bold;
+  height: 150px;
+  margin: -1px 0 0 -1px;
+  outline: none;
+  padding: 0;
+  transition: all 0.1s ease-in-out;
+  width: 150px;
+}
+
+.square:focus {
+  box-shadow: 0 0 0 2px #FFB6C1;
+  outline: none;
+}
+
+/* Update X and O styles */
+.x:before {
+  content: 'X';
+}
+.o:before {
+  content: 'O';
+}
+
+/* Update row styles */
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.board-row2,
+.board-row3 {
+  margin-top: -1px;
+}
+
+/* Add background and padding to game board */
+.game-board {
+  background-color: #FFE1E6;
+  border-radius: 10px;
+  padding: 20px;
+}
