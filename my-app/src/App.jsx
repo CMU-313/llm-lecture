@@ -15,6 +15,11 @@ const TicTacToe = () => {
     setXIsNext(!xIsNext);
   };
 
+  const resetGame = () => {
+    setBoard(Array(9).fill(null));
+    setXIsNext(true);
+  };
+
   const renderSquare = (index) => {
     return (
       <button className="square" onClick={() => handleClick(index)}>
@@ -50,6 +55,9 @@ const TicTacToe = () => {
         {renderSquare(7)}
         {renderSquare(8)}
       </div>
+      <button className="reset-btn" onClick={resetGame}>
+        Reset Game
+      </button>
     </div>
   );
 };
