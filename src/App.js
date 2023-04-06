@@ -19,14 +19,31 @@ const Board = () => {
     setIsXNext(!isXNext);
   };
 
+  const handleRestart = () => { setSquares(Array(9).fill(null)); setIsXNext(true); };
+
   const renderSquare = (i) => (
     <Square value={squares[i]} onClick={() => handleClick(i)} />
   );
 
+  const isBoardFull = (squares) => {
+    return squares.every((square) => square !== null);
+  };
+
   const winner = calculateWinner(squares);
-  const status = winner
-    ? `Winner: ${winner}`
-    : `Next player: ${isXNext ? 'X' : 'O'}`;
+  let status;
+  if (winner) {
+    status = `Winner: ${winner}`;
+  } else if (isBoardFull(squares)) {
+    status = "It's a draw!";
+  } else {
+    status = `Next player: ${isXNext ? 'X' : 'O'}`;
+  }
+
+
+  // const winner = calculateWinner(squares);
+  // const status = winner
+  //   ? `Winner: ${winner}`
+  //   : `Next player: ${isXNext ? 'X' : 'O'}`;
 
   return (
     <div>
@@ -46,9 +63,13 @@ const Board = () => {
         {renderSquare(7)}
         {renderSquare(8)}
       </div>
+      <button className="restart-button" onClick={handleRestart}>
+        Restart
+      </button>
     </div>
   );
 };
+
 
 const App = () => {
   return (

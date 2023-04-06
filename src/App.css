@@ -55,3 +55,19 @@ body {
   margin-bottom: 10px;
   font-size: 18px;
 }
+
+.restart-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.restart-button:hover {
+  background-color: #555;
+}
