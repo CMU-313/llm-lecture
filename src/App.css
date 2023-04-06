@@ -9,6 +9,7 @@ body {
   margin: 50px auto;
   padding: 20px;
   background-color: white;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -41,6 +42,14 @@ body {
   transition: background 0.3s;
 }
 
+.square.X {
+  color: #f44336; /* X color */
+}
+
+.square.O {
+  color: #2196f3; /* O color */
+}
+
 .square:hover {
   background: #eee;
 }
@@ -61,13 +70,14 @@ body {
   margin: 20px auto;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #333;
+  background-color: #4caf50;
   color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .restart-button:hover {
-  background-color: #555;
+  background-color: #66bb6a;
 }

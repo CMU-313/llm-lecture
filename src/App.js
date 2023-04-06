@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 const Square = ({ value, onClick }) => (
-  <button className="square" onClick={onClick}>
+  <button className={`square ${value}`} onClick={onClick}>
     {value}
   </button>
 );
