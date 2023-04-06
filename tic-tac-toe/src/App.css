@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  border: 2px solid #333;
+  width: 80px;
+  height: 80px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #eee;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cell:hover {
+  background-color: #ddd;
+}
+
+.x {
+  color: #0077ff;
+}
+
+.o {
+  color: #ff5500;
+}
