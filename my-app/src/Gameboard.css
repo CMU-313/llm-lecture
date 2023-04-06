@@ -1,0 +1,17 @@
+.game-board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .cell:hover {
+    background-color: #ccc;
+  }
