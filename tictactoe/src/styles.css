@@ -1,0 +1,163 @@
+.game {
+    background-color: #222;
+    border: 2px solid #999;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+    position: relative;
+  }
+  
+  .game-board {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #999;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .game-info {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .board {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #999;
+    background-image: url("https://www.cs.cmu.edu/~mhilton/assets/img/hilton_pic.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .square img {
+    max-width: 150%;
+    max-height: 100%;
+  }
+  
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .square {
+    width: 150px;
+    height: 150px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    background-color: #fff;
+    border: 2px solid #999;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: -2px;
+    margin-bottom: -2px;
+    color: #333;
+    text-shadow: 1px 1px 2px #ccc;
+    box-shadow: 0px 0px 4px #ccc;
+    transition: background-color 0.2s ease-in-out;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .square:focus,
+  .square:hover {
+    background-color: rgb(82, 163, 255);
+    color: #fff;
+    text-shadow: 1px 1px 2px #999;
+    box-shadow: 0px 0px 4px #999;
+  }
+  
+  .status {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #ccc;
+  }
+  
+  .flash {
+    animation-name: flash;
+    animation-duration: 0.5s;
+    animation-iteration-count: 3;
+  }
+  
+  @keyframes flash {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Add some color to the game */
+  .game {
+    background-color: #222;
+    border: 2px solid #999;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+  }
+  
+  .game-board {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #999;
+  }
+  
+  .board {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #999;
+  }
+  
+  .row:nth-child(2n) .square:nth-child(2n),
+  .row:nth-child(2n+1) .square:nth-child(2n+1) {
+    background-color: #444;
+  }
+  
+  /* Add some animation to the game status */
+  .status {
+    position: relative;
+  }
+  
+  .status:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    animation-name: disco;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  .status.winner:after {
+    opacity: 1;
+  }
+  
+  .status:hover:after {
+    opacity: 1;
+  }
+  
+  @keyframes disco {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    50% {
+      filter: hue-rotate
+    }
+  }
+  
