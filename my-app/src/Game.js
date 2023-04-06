@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import Board from './Board';
 
+/**
+ * The Game component manages the state of the Tic Tac Toe game and renders the Board and game status.
+ */
 function Game() {
-  const [board, setBoard] = useState(Array(9).fill(null));
-  const [xIsNext, setXIsNext] = useState(true);
-  const [winner, setWinner] = useState(null);
+  const [board, setBoard] = useState(Array(9).fill(null)); // State for the game board
+  const [xIsNext, setXIsNext] = useState(true); // State for current player
+  const [winner, setWinner] = useState(null); // State for the winner of the game
 
+  /**
+   * Handles the click event for a square on the game board. Updates the board and checks for a winner.
+   * @param {number} index - The index of the clicked square
+   */
   function handleClick(index) {
     const squares = [...board];
 
@@ -26,6 +33,11 @@ function Game() {
     setXIsNext(!xIsNext);
   }
 
+  /**
+   * Determines the winner of the game, if there is one.
+   * @param {Array} squares - The current state of the game board
+   * @returns {string|null} - The symbol of the winner, or null if there is no winner yet
+   */
   function calculateWinner(squares) {
     const lines = [
       [0, 1, 2],
@@ -46,6 +58,10 @@ function Game() {
     return null;
   }
 
+  /**
+   * Renders the current game status, either displaying the winner or the next player to move.
+   * @returns {string} - The current game status message
+   */
   function renderStatus() {
     if (winner) {
       return `Winner: ${winner}`;
@@ -53,6 +69,10 @@ function Game() {
     return `Next player: ${xIsNext ? 'X' : 'O'}`;
   }
 
+  /**
+   * Renders the reset button, which resets the game board, player turn, and winner state.
+   * @returns {JSX.Element} - The reset button element
+   */
   function renderResetButton() {
     return (
       <button onClick={() => {
