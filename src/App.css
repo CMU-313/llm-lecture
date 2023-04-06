@@ -81,3 +81,11 @@ body {
 .restart-button:hover {
   background-color: #66bb6a;
 }
+
+.giraffe-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+}
+

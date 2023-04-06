@@ -1,4 +1,4 @@
-# Tic-Tac-Toe React App
+# Tic-Tac-Toe React App AND IT HAS A GIRAFFE!
 
 This project is a simple implementation of the classic Tic-Tac-Toe game using React. Players can take turns placing "X" and "O" on the 3x3 grid until a player wins or the game ends in a draw. The game also includes a "Restart" button to clear the board and start a new game.
 

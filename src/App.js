@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import giraffeImage from './giraffe.png'; // Import the giraffe image
 
 const Square = ({ value, onClick }) => (
   <button className={`square ${value}`} onClick={onClick}>
@@ -66,6 +67,7 @@ const Board = () => {
       <button className="restart-button" onClick={handleRestart}>
         Restart
       </button>
+      < img src={giraffeImage} alt="Cute Giraffe" className="giraffe-image" /> {/* Add the giraffe image */}
     </div>
   );
 };
