@@ -1,3 +1,8 @@
+# Team for In-Class Activity
+David Matovic,
+Colin May
+
+
 # Tic Tac Toe React App
 
 This repository only contains this Readme. Your task is to build a tic tac toe react app using generative AI tools like ChatGPT or GitHub Copilot to assist you in **every** aspect of the process.
