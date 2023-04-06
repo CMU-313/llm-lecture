@@ -20,13 +20,22 @@ function calculateWinner(squares) {
   return null;
 }
 
+
+
 function Square({ value, onClick }) {
-  return (
-    <button className="square" onClick={onClick}>
-      {value}
-    </button>
-  );
-}
+    let imageSrc = null;
+    if (value === "X") {
+      imageSrc = "https://www.cs.cmu.edu/~mhilton/assets/img/hilton_pic.jpg";
+    } else if (value === "O") {
+      imageSrc = "https://conf.researchr.org/getProfileImage/hyrumwright1/d28ae348-3c62-47d8-8eda-4de8f3e03d7b/small.jpg?1638785011000";
+    }
+  
+    return (
+      <button className="square" onClick={onClick}>
+        {imageSrc ? <img src={imageSrc} alt={value} /> : value}
+      </button>
+    );
+  }
 
 export default function Board() {
   const [squares, setSquares] = React.useState(Array(9).fill(null));
