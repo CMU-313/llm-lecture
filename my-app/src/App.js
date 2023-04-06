@@ -23,6 +23,11 @@ function Board() {
     );
   }
 
+  function handleReset() {
+    setSquares(Array(9).fill(null));
+    setXIsNext(true);
+  }
+  
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
@@ -51,6 +56,7 @@ function Board() {
         {renderSquare(7)}
         {renderSquare(8)}
       </div>
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 }
@@ -73,6 +79,7 @@ function calculateWinner(squares) {
     }
   }
   return null;
+
 }
 
 export default Board;
