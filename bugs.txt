@@ -1,0 +1,1 @@
+I had an issue where running some npx thingy kept crashing my computer, so I tried!
