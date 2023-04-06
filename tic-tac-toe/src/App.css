@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}a.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.square {
+  width: 6rem;
+  height: 6rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.square:hover {
+  background-color: #efefef;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square.X {
+  color: #f44336;
+}
+
+.square.O {
+  color: #2196f3;
+}
+
+.status {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.reset {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #333;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background-color: #666;
+}
