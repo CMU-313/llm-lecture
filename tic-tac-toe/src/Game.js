@@ -14,6 +14,8 @@ class Game extends React.Component {
       stepNumber: 0,
       xIsNext: true,
       gameOver: false,
+      player1: "X",
+      player2: "O",
     };
   }
 
@@ -58,7 +60,7 @@ class Game extends React.Component {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
-
+  
     const moves = history.map((step, move) => {
       const desc = move ? 'Go to move #' + move : 'Go to game start';
       return (
@@ -67,28 +69,37 @@ class Game extends React.Component {
         </li>
       );
     });
-
+  
     let status;
     if (winner) {
-      status = 'Winner: ' + winner;
+    status = 'Winner: ' + winner;
     } else if (this.state.stepNumber === 9) {
-      status = 'Draw';
+    status = 'Draw';
     } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+    status = 'Next player: ' + (this.state.xIsNext ? this.state.player1 : this.state.player2);
     }
 
+  
     return (
       <div className="game">
         <div className="game-board">
-          <Board squares={current.squares} onClick={this.handleClick.bind(this)} />
+          <Board squares={current.squares} onClick={(i) => this.handleClick(i)} />
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <button onClick={this.resetGame.bind(this)}>Reset Game</button>
+          <button onClick={() => this.resetGame()}>Reset Game</button>
+          <PlayerSelection
+            player1={this.state.player1}
+            player2={this.state.player2}
+            onChangePlayer1={(e) => this.setState({ player1: e.target.value })}
+            onChangePlayer2={(e) => this.setState({ player2: e.target.value })}
+          />
+          <ol>{moves}</ol>
         </div>
       </div>
     );
   }
+  
 }
 
 export default Game;
@@ -116,3 +127,19 @@ function calculateWinner(squares) {
   }
   return null;
 }
+
+function PlayerSelection(props) {
+    return (
+      <div className="player-selection">
+        <label>
+          Player 1:
+          <input type="text" value={props.player1} onChange={props.onChangePlayer1} />
+        </label>
+        <label>
+          Player 2:
+          <input type="text" value={props.player2} onChange={props.onChangePlayer2} />
+        </label>
+      </div>
+    );
+  }
+  
