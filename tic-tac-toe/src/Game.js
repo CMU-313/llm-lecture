@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Board from './Board';
 import './Game.css';
 
@@ -13,8 +13,18 @@ class Game extends React.Component {
       ],
       stepNumber: 0,
       xIsNext: true,
+      gameOver: false,
     };
   }
+
+  resetGame() {
+    this.setState({
+      history: [{ squares: Array(9).fill(null) }],
+      stepNumber: 0,
+      xIsNext: true,
+      gameOver: false,
+    });
+  };
 
   handleClick(i) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
@@ -70,14 +80,11 @@ class Game extends React.Component {
     return (
       <div className="game">
         <div className="game-board">
-          <Board
-            squares={current.squares}
-            onClick={(i) => this.handleClick(i)}
-          />
+          <Board squares={current.squares} onClick={this.handleClick.bind(this)} />
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{moves}</ol>
+          <button onClick={this.resetGame.bind(this)}>Reset Game</button>
         </div>
       </div>
     );
