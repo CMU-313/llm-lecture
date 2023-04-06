@@ -7,20 +7,25 @@ function App() {
 
   function handleCellClick(index) {
     const newBoard = [...board];
+    if (newBoard[index] || calculateWinner(newBoard)) {
+      // if cell is already occupied or game is won, do nothing
+      return;
+    }
     newBoard[index] = currentPlayer;
     setBoard(newBoard);
     setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X'); // alternate between X and O
   }
 
-  return (
+
+  return (<div>
+    <div className="player-turn">{`Current player: ${currentPlayer}`}</div>
     <div className="board">
-      <div className="player-turn">{`Current player: ${currentPlayer}`}</div>
       {board.map((cell, index) => (
         <div key={index} className="cell" onClick={() => handleCellClick(index)}>
           {cell}
         </div>
       ))}
-    </div>
+    </div></div>
   );
 }
 
