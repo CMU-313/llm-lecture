@@ -43,9 +43,15 @@ function Game() {
 
   const current = history[stepNumber];
   const winner = calculateWinner(current.squares);
-  const status = winner
-    ? `Winner: ${winner}`
-    : `Next player: ${xIsNext ? 'X' : 'O'}`;
+  let status;
+
+  if (winner) {
+    status = `Winner: ${winner}`;
+    // Display a congratulatory message
+    alert(`Congratulations ${winner}! You won the game!`);
+  } else {
+    status = `Next player: ${xIsNext ? 'X' : 'O'}`;
+  }
 
   const moves = history.map((step, move) => {
     const desc = move ? `Go to move #${move}` : 'Go to game start';
