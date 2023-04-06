@@ -1,5 +1,5 @@
 # Team for In-Class Activity
-David Matovic
+David Matovic,
 Colin May
 
 
