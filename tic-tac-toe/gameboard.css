@@ -1,0 +1,29 @@
+.board {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .board-row {
+    display: flex;
+  }
+  
+  .square {
+    width: 60px;
+    height: 60px;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    border: 1px solid #ccc;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .square:hover {
+    background-color: #f5f5f5;
+  }
