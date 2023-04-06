@@ -23,6 +23,11 @@ function App() {
     );
   };
 
+  const handleRestart = () => {
+    setBoard(Array(9).fill(null));
+    setPlayer('X');
+  };
+
   const winner = calculateWinner(board);
   const status = winner
     ? `Winner: ${winner}`
@@ -47,7 +52,22 @@ function App() {
           {renderSquare(8)}
         </div>
       </div>
-      <div className="game-info">{status}</div>
+      <div className="game-info">
+        <div className="status">{status}</div>
+        {winner && (
+          <div className="winner">
+            {winner} has won the game!{' '}
+            <button className="restart-button" onClick={handleRestart}>
+              Restart
+            </button>
+          </div>
+        )}
+        {!winner && (
+          <button className="restart-button" onClick={handleRestart}>
+            Reset Game
+          </button>
+        )}
+      </div>
     </div>
   );
 }
