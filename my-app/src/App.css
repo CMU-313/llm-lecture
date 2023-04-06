@@ -1,0 +1,20 @@
+.App {
+    text-align: center;
+  }
+  
+  .Board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgb(0, 0, 0);
+  }
+  
+  .Cell {
+    width: 198px;
+    height: 198px;
+    border: 1px solid black;
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+  }
