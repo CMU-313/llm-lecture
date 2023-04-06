@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 300px;
+  height: 300px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #e6e6e6;
+}
+
+.cell.X {
+  color: blue;
+}
+
+.cell.O {
+  color: red;
+}
