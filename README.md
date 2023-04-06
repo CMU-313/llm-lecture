@@ -12,13 +12,13 @@ Before you begin working on the TO-DO, please take note of the following questio
 # TO-DO
 **Disclaimer** You are should attempt each task, but there is no guarantee that ChatGPT / Copilot can assist you with it.  If you find yourself stuck, you may move on or try a different task.
 
-- [ ] Make a fork of this repository, work individually or as pairs
-- [ ] Set up Boilerplate Create React App
-- [ ] Implement the **Core Features**
+- [X] Make a fork of this repository, work individually or as pairs
+- [X] Set up Boilerplate Create React App
+- [X] Implement the **Core Features**
 - [ ] **Write tests** Write unit tests for your components and functions using a testing library (e.g., Jest, React Testing Library). Ensure that your tests cover edge cases and provide adequate code coverage.
 - [ ] **Write documentation** Document your code, including component descriptions, function explanations, and usage instructions. This will help future developers understand and maintain the codebase.
-- [ ] **Write commit messages** and push commits
-- [ ] **Make a Pull Request** and write pull request descriptions
+- [X] **Write commit messages** and push commits
+- [X] **Make a Pull Request** and write pull request descriptions
 - [ ] Implement the **Stretch Features**
 
 # Core Features to Implement
