@@ -60,3 +60,32 @@ game board and resetting the turn indicator.
 - React Testing Library Documentation: https://testing-library.com/docs/react-testing-library/intro
 - ChatGPT: https://chatgpt.com/
 - GitHub Copilot: https://copilot.github.com/
+
+
+# TicTacToe Game
+This is a simple React application that allows two players to play tic-tac-toe.
+
+# Components
+Square
+This component represents a square on the tic-tac-toe board. It can display either an X or an O, or be empty.
+
+# Props
+value - The current value of the square ('X', 'O', or null).
+onClick - A function to call when the square is clicked.
+Board
+This component represents the tic-tac-toe board. It contains an array of nine Squares, and handles click events on each Square.
+
+# Props
+squares - An array of nine values representing the current state of the board.
+onClick - A function to call when a Square is clicked.
+Game
+This component represents the entire tic-tac-toe game. It manages the state of the game, handles click events on the Board, and displays information about the game (e.g., whose turn it is).
+
+# State
+history - An array of previous states of the Board.
+stepNumber - The current step number (i.e., the index of the current state in the history array).
+xIsNext - A boolean indicating whether the next move should be an 'X' or an 'O'.
+Methods
+handleClick(i) - Handles click events on the Board by updating the state of the game.
+Usage
+To start the game, run npm start from the command line.
