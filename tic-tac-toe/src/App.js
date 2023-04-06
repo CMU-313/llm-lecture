@@ -73,6 +73,18 @@ class App extends Component {
     });
   }
 
+  handleReset = () => {
+    this.setState({
+      board: [
+        [null, null, null],
+        [null, null, null],
+        [null, null, null]
+      ],
+      player: 'X',
+      winner: null
+    });
+  };
+
   render() {
     const { board, player, winner } = this.state;
   
