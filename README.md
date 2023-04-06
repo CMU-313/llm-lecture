@@ -12,19 +12,19 @@ To run this project, you need to have [Node.js](https://nodejs.org/) installed o
 
 1. Clone the repository:
 
-git clone https://github.com/torqueJY32/tic-tac-toe-react.git
+`git clone https://github.com/torqueJY32/tic-tac-toe-react.git`
 
 2. Change to the project directory:
 
-cd tic-tac-toe-react
+`cd tic-tac-toe-react`
 
 3. Install dependencies:
 
-npm install
+`npm install`
 
 4. Start the development server:
 
-npm start
+`npm start`
 
 The app will now be running at `http://localhost:3000/`.
 
