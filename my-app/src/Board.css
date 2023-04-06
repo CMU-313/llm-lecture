@@ -1,0 +1,53 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1px;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid black;
+  }
+  
+  .cell:hover {
+    background-color: lightgray;
+  }
+  
+  .cell:first-child,
+  .cell:nth-child(4),
+  .cell:nth-child(7) {
+    border-left: none;
+  }
+  
+  .cell:last-child,
+  .cell:nth-child(3),
+  .cell:nth-child(6) {
+    border-right: none;
+  }
+  
+  .cell:nth-child(1),
+  .cell:nth-child(2),
+  .cell:nth-child(3) {
+    border-top: none;
+  }
+  
+  .cell:nth-child(7),
+  .cell:nth-child(8),
+  .cell:nth-child(9) {
+    border-bottom: none;
+  }
+  
