@@ -15,3 +15,15 @@
   .cell:hover {
     background-color: #ccc;
   }
+
+
+p {
+    color: #333;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+  
+p span {
+    color: red;
+}
