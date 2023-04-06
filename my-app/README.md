@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+## `Game` Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Description
 
-## Available Scripts
+The `Game` component is responsible for managing the state of the Tic Tac Toe game. It keeps track of which player's turn it is, the current state of the game board, and whether the game has ended in a win or draw.
 
-In the project directory, you can run:
+### Props
 
-### `npm start`
+None
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### State
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `board`: An array of 9 strings representing the current state of the game board. Each string is either "X", "O", or null.
+- `xIsNext`: A boolean indicating whether it is currently the X player's turn.
+- `winner`: A string indicating the winner of the game, if any. Possible values are "X", "O", "draw", or null.
 
-### `npm test`
+### Methods
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `handleClick(i)`: A function that is called when a square on the game board is clicked. It updates the state of the `board` array and checks if there is a winner or if the game has ended in a draw.
 
-### `npm run build`
+## `Board` Component
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Description
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The `Board` component is responsible for rendering the game board and handling player clicks. It contains 9 `Square` components and uses the `onClick` prop to handle user clicks.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Props
 
-### `npm run eject`
+- `squares`: An array of 9 strings representing the current state of the game board. Each string is either "X", "O", or null.
+- `onClick(i)`: A function that is called when a square on the game board is clicked. It passes the index of the clicked square to the `handleClick` function in the `Game` component.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Methods
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+None
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## `Square` Component
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Description
 
-## Learn More
+The `Square` component represents a single square on the Tic Tac Toe game board. It renders an `X`, `O`, or nothing depending on the value of its `value` prop.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Props
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `value`: A string representing the value of the square. Possible values are "X", "O", or null.
+- `onClick()`: A function that is called when the square is clicked. It is passed up to the `Board` component to handle user clicks.
 
-### Code Splitting
+### Methods
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+None
 
-### Analyzing the Bundle Size
+## `calculateWinner(squares)` Function
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Description
 
-### Making a Progressive Web App
+The `calculateWinner` function is responsible for determining the winner of the Tic Tac Toe game. It takes an array of 9 strings representing the current state of the game board and returns the winner, if any.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Parameters
 
-### Advanced Configuration
+- `squares`: An array of 9 strings representing the current state of the game board. Each string is either "X", "O", or null.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Return Value
 
-### Deployment
+A string indicating the winner of the game, if any. Possible values are "X", "O", "draw", or null.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Usage Instructions
 
-### `npm run build` fails to minify
+To use the Tic Tac Toe app, simply run the following command to start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## npm start
+
+This will open the app in your default browser. From there, you can click on the squares on the game board to place X's and O's and try to win the game. The app also includes unit tests that can be run with the following command:
+
+## npm test
+
+This will run all of the tests in the app and provide feedback on whether they passed or failed.
