@@ -43,12 +43,13 @@ function Game() {
 
   const current = history[stepNumber];
   const winner = calculateWinner(current.squares);
-  let status;
+  const isBoardFull = current.squares.every((square) => square !== null);
 
+  let status;
   if (winner) {
     status = `Winner: ${winner}`;
-    // Display a congratulatory message
-    alert(`Congratulations ${winner}! You won the game!`);
+  } else if (isBoardFull) {
+    status = 'Draw!';
   } else {
     status = `Next player: ${xIsNext ? 'X' : 'O'}`;
   }
