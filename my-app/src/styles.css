@@ -1,8 +1,12 @@
-.game {
+/* .game {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  justify-content: center;
+  height: 100vh;
+  background-color: #e2f2ff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
 }
 
 h1 {
@@ -13,20 +17,122 @@ h1 {
 .board {
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
+  border: 2px solid #333333;
   padding: 1rem;
   border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  margin-top: 2rem;
 }
 
 .board-row {
   display: flex;
+  justify-content: center;
 }
 
 .square {
-  width: 4rem;
-  height: 4rem;
-  border: 2px solid black;
+  width: 6rem;
+  height: 6rem;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.square:hover {
+  background-color: #f2f2f2;
+}
+
+.status {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.restart-button {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #333333;
+} */
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('https://i.imgur.com/ujFGUfJ.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  margin-top: 2rem;
+}
+
+.board-row {
   display: flex;
   justify-content: center;
-  align-items: center
 }
+
+.square {
+  width: 6rem;
+  height: 6rem;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.square:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.status {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.restart-button {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #333333;
+  border: none;
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
