@@ -10,7 +10,7 @@ Before you begin working on the TO-DO, please take note of the following questio
 4. What is something you did not expect when using ChatGPT and GitHub Copilot?
 
 # TO-DO
-**Disclaimer** You are required to attempt each task, but there is no guarantee that ChatGPT / Copilot can assist you with it.
+**Disclaimer** You are should attempt each task, but there is no guarantee that ChatGPT / Copilot can assist you with it.  If you find yourself stuck, you may move on or try a different task.
 
 - [ ] Make a fork of this repository, work individually or as pairs
 - [ ] Set up Boilerplate Create React App
