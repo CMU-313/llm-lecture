@@ -16,6 +16,36 @@
     background-color: #ccc;
   }
 
+  .game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .cell {
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .cell:hover {
+    background-color: lightgray;
+  }
+  
+
 
 p {
     color: #333;
