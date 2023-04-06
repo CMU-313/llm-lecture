@@ -1,19 +1,4 @@
-.board {
-    margin: 20px;
-  }
-  
-  .board-row:after {
-    clear: both;
-    content: '';
-    display: table;
-  }
-  
-  .board-row {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .square {
+.square {
     background: #fff;
     border: 1px solid #999;
     float: left;
