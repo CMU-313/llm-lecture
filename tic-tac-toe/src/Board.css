@@ -1,0 +1,33 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  
+  .square {
+    background-color: #fff;
+    color: #000;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .square:hover {
+    background-color: #eee;
+  }
+  
+  .square.X {
+    color: #f00;
+  }
+  
+  .square.O {
+    color: #00f;
+  }
+  

@@ -1,0 +1,34 @@
+.game {
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .game-board {
+    margin-right: 20px;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+  }
+  
+  .game-info ol {
+    padding-left: 20px;
+  }
+  
+  .game-info ol li button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .game-info ol li button:hover {
+    background-color: #eee;
+  }
+  
