@@ -38,19 +38,40 @@
 }
 
 .board {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 2px solid #333;
+    border-radius: 10px;
 }
 
 .cell {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 96px;
+    height: 96px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
     background-color: #eee;
-    font-size: 50px;
-    width: 100px;
-    height: 100px;
     cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+.cell.X {
+    color: #e74c3c;
+}
+
+.cell.O {
+    color: #3498db;
+}
+
